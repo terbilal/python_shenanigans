@@ -104,7 +104,7 @@ def main():
             # get player choice
             player_rc = input("r,c : ").split(",")
             while [int(player_rc[0]), int(player_rc[1])] not in board.get_available_cells():
-                player_rc = input("r,c : ")
+                player_rc = input("r,c : ").split(",")
             board.set_cell(int(player_rc[0]), int(player_rc[1]), player_char)
             # check if game is over
             if board.is_game_over():
@@ -129,7 +129,7 @@ def main():
             # get player choice
             player_rc = input("r,c : ").split(",")
             while [int(player_rc[0]), int(player_rc[1])] not in board.get_available_cells():
-                player_rc = input("r,c : ")
+                player_rc = input("r,c : ").split(",")
             board.set_cell(int(player_rc[0]), int(player_rc[1]), player_char)
             print(board.board_string())
         # check for board over one more time
